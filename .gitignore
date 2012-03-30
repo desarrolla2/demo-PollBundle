@@ -1,0 +1,12 @@
+/web/css/*
+/web/js/*
+/web/bundles/*
+/web/images/*
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
+/app/config/security.yml
+/app/config/config_travis.yml
+/nbproject
