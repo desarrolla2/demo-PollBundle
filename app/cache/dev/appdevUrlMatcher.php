@@ -63,25 +63,42 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::helloadminAction',)), array('_route' => '_demo_secured_hello_admin'));
         }
 
-        if (0 === strpos($pathinfo, '/demo')) {
-            // _demo
-            if (rtrim($pathinfo, '/') === '/demo') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', '_demo');
-                }
-                return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::indexAction',  '_route' => '_demo',);
+        // _demo
+        if (rtrim($pathinfo, '/') === '/demo') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', '_demo');
             }
+            return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::indexAction',  '_route' => '_demo',);
+        }
 
-            // _demo_hello
-            if (0 === strpos($pathinfo, '/demo/hello') && preg_match('#^/demo/hello/(?P<name>[^/]+?)$#xs', $pathinfo, $matches)) {
-                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::helloAction',)), array('_route' => '_demo_hello'));
-            }
+        // _assetic_4788d05
+        if ($pathinfo === '/css/4788d05.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '4788d05',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_4788d05',);
+        }
 
-            // _demo_contact
-            if ($pathinfo === '/demo/contact') {
-                return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::contactAction',  '_route' => '_demo_contact',);
-            }
+        // _assetic_4788d05_0
+        if ($pathinfo === '/css/4788d05_part_1_01-bootstrap-responsive_1.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '4788d05',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_4788d05_0',);
+        }
 
+        // _assetic_4788d05_1
+        if ($pathinfo === '/css/4788d05_part_1_02-bootstrap_2.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '4788d05',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_4788d05_1',);
+        }
+
+        // _assetic_4788d05_2
+        if ($pathinfo === '/css/4788d05_part_1_03-demo_3.css') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => '4788d05',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_4788d05_2',);
+        }
+
+        // _assetic_d074a62
+        if ($pathinfo === '/js/d074a62.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'd074a62',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_d074a62',);
+        }
+
+        // _assetic_d074a62_0
+        if ($pathinfo === '/js/d074a62_bootstrap_1.js') {
+            return array (  '_controller' => 'assetic.controller:render',  'name' => 'd074a62',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_d074a62_0',);
         }
 
         // _wdt

@@ -3,137 +3,112 @@
 /* AcmeDemoBundle::layout.html.twig */
 class __TwigTemplate_46718420b3abcbb962c3fcba57a6f27b extends Twig_Template
 {
-    public function __construct(Twig_Environment $env)
-    {
-        parent::__construct($env);
-
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'content_header_more' => array($this, 'block_content_header_more'),
-            'content_header' => array($this, 'block_content_header'),
-            'content' => array($this, 'block_content'),
-        );
-    }
-
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
         echo "<!DOCTYPE html>
-<html>
+<html lang=\"en\">
     <head>
-        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
-        <link rel=\"stylesheet\" href=\"";
-        // line 5
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/css/demo.css"), "html", null, true);
-        echo "\" type=\"text/css\" media=\"all\" />
-        <title>";
-        // line 6
-        $this->displayBlock('title', $context, $blocks);
-        echo "</title>
-        <link rel=\"shortcut icon\" href=\"";
-        // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+        <meta charset=\"utf-8\">
+        <title>Bootstrap, from Twitter</title>
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <meta name=\"description\" content=\"\">
+        <meta name=\"author\" content=\"\">
+        ";
+        // line 9
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+            // asset "4788d05_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_4788d05_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/4788d05_part_1_01-bootstrap-responsive_1.css");
+            // line 10
+            echo "            <link rel=\"stylesheet\" href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" />
+        ";
+            // asset "4788d05_1"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_4788d05_1") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/4788d05_part_1_02-bootstrap_2.css");
+            echo "            <link rel=\"stylesheet\" href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" />
+        ";
+            // asset "4788d05_2"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_4788d05_2") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/4788d05_part_1_03-demo_3.css");
+            echo "            <link rel=\"stylesheet\" href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" />
+        ";
+        } else {
+            // asset "4788d05"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_4788d05") : $this->env->getExtension('assets')->getAssetUrl("_controller/css/4788d05.css");
+            echo "            <link rel=\"stylesheet\" href=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" />
+        ";
+        }
+        unset($context["asset_url"]);
+        // line 12
+        echo "        <link href=\"../assets/css/bootstrap.css\" rel=\"stylesheet\">    
+        <link href=\"../assets/css/bootstrap-responsive.css\" rel=\"stylesheet\">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
+        <![endif]-->
+        <link rel=\"shortcut icon\" href=\"../assets/ico/favicon.ico\">
     </head>
     <body>
-        <div id=\"symfony-wrapper\">
-            <div id=\"symfony-header\">
-                <a href=\"";
-        // line 12
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_welcome"), "html", null, true);
-        echo "\">
-                    <img src=\"";
-        // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmedemo/images/logo.gif"), "html", null, true);
-        echo "\" alt=\"Symfony\">
-                </a>
-                <form id=\"symfony-search\" method=\"GET\" action=\"http://symfony.com/search\">
-                    <label for=\"symfony-search-field\"><span>Search on Symfony Website</span></label>
-                    <input name=\"q\" id=\"symfony-search-field\" type=\"search\" placeholder=\"Search on Symfony website\" class=\"medium_txt\">
-                    <input type=\"submit\" class=\"symfony-button-grey\" value=\"OK\" />
-                </form>
-            </div>
-
-            ";
-        // line 22
-        if ($this->getAttribute($this->getAttribute($this->getContext($context, "app"), "session"), "flash", array(0 => "notice"), "method")) {
-            // line 23
-            echo "                <div class=\"flash-message\">
-                    <em>Notice</em>: ";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getContext($context, "app"), "session"), "flash", array(0 => "notice"), "method"), "html", null, true);
-            echo "
+        <div class=\"navbar navbar-fixed-top\">
+            <div class=\"navbar-inner\">
+                <div class=\"container\">
+                    <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-collapse\">
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                        <span class=\"icon-bar\"></span>
+                    </a>
+                    <a class=\"brand\" href=\"#\">Project name</a>
+                    <div class=\"nav-collapse\">
+                        <ul class=\"nav\">
+                            <li class=\"active\"><a href=\"#\">Home</a></li>
+                            <li><a href=\"#about\">About</a></li>
+                            <li><a href=\"#contact\">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
                 </div>
-            ";
-        }
-        // line 27
-        echo "
-            ";
-        // line 28
-        $this->displayBlock('content_header', $context, $blocks);
-        // line 37
-        echo "
-            <div class=\"symfony-content\">
-                ";
-        // line 39
-        $this->displayBlock('content', $context, $blocks);
-        // line 41
-        echo "            </div>
-
-            ";
-        // line 43
-        if (array_key_exists("code", $context)) {
-            // line 44
-            echo "                <h2>Code behind this page</h2>
-                <div class=\"symfony-content\">";
+            </div>
+        </div>
+        <div class=\"container\">
+            <h1>Bootstrap starter template</h1>
+            <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+        </div>
+        ";
+        // line 44
+        if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
+            // asset "d074a62_0"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_d074a62_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/d074a62_bootstrap_1.js");
             // line 45
-            echo $this->getContext($context, "code");
-            echo "</div>
-            ";
+            echo "            <script src=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" type=\"text/javascript\"></script>
+        ";
+        } else {
+            // asset "d074a62"
+            $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_d074a62") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/d074a62.js");
+            echo "            <script src=\"";
+            echo twig_escape_filter($this->env, $this->getContext($context, "asset_url"), "html", null, true);
+            echo "\" type=\"text/javascript\"></script>
+        ";
         }
+        unset($context["asset_url"]);
         // line 47
-        echo "        </div>
+        echo "        <script type=\"text/javascript\">
+      var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-23939978-4']); _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+        </script>
     </body>
 </html>
 ";
-    }
-
-    // line 6
-    public function block_title($context, array $blocks = array())
-    {
-        echo "Demo Bundle";
-    }
-
-    // line 30
-    public function block_content_header_more($context, array $blocks = array())
-    {
-        // line 31
-        echo "                        <li><a href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_demo"), "html", null, true);
-        echo "\">Demo Home</a></li>
-                    ";
-    }
-
-    // line 28
-    public function block_content_header($context, array $blocks = array())
-    {
-        // line 29
-        echo "                <ul id=\"menu\">
-                    ";
-        // line 30
-        $this->displayBlock('content_header_more', $context, $blocks);
-        // line 33
-        echo "                </ul>
-
-                <div style=\"clear: both\"></div>
-            ";
-    }
-
-    // line 39
-    public function block_content($context, array $blocks = array())
-    {
-        // line 40
-        echo "                ";
     }
 
     public function getTemplateName()
