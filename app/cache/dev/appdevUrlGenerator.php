@@ -25,8 +25,9 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_assetic_4788d05_0' => true,
        '_assetic_4788d05_1' => true,
        '_assetic_4788d05_2' => true,
-       '_assetic_d074a62' => true,
-       '_assetic_d074a62_0' => true,
+       '_assetic_c9109f3' => true,
+       '_assetic_c9109f3_0' => true,
+       '_assetic_c9109f3_1' => true,
        '_wdt' => true,
        '_profiler_search' => true,
        '_profiler_purge' => true,
@@ -120,14 +121,19 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => '4788d05',  'pos' => 2,  '_format' => 'css',), array (), array (  0 =>   array (    0 => 'text',    1 => '/css/4788d05_part_1_03-demo_3.css',  ),));
     }
 
-    private function get_assetic_d074a62RouteInfo()
+    private function get_assetic_c9109f3RouteInfo()
     {
-        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'd074a62',  'pos' => NULL,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/d074a62.js',  ),));
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'c9109f3',  'pos' => NULL,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/c9109f3.js',  ),));
     }
 
-    private function get_assetic_d074a62_0RouteInfo()
+    private function get_assetic_c9109f3_0RouteInfo()
     {
-        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'd074a62',  'pos' => 0,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/d074a62_bootstrap_1.js',  ),));
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'c9109f3',  'pos' => 0,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/c9109f3_part_1_01-jquery-1.7.2.min_1.js',  ),));
+    }
+
+    private function get_assetic_c9109f3_1RouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'assetic.controller:render',  'name' => 'c9109f3',  'pos' => 1,  '_format' => 'js',), array (), array (  0 =>   array (    0 => 'text',    1 => '/js/c9109f3_part_1_02-bootstrap_2.js',  ),));
     }
 
     private function get_wdtRouteInfo()

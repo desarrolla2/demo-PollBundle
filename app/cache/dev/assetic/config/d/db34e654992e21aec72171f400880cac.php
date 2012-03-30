@@ -19,19 +19,19 @@ return array (
       'combine' => NULL,
     ),
   ),
-  'd074a62' => 
+  'c9109f3' => 
   array (
     0 => 
     array (
-      0 => '@AcmeDemoBundle/Resources/public/js/bootstrap.js',
+      0 => '@AcmeDemoBundle/Resources/public/js/*',
     ),
     1 => 
     array (
     ),
     2 => 
     array (
-      'output' => '_controller/js/d074a62.js',
-      'name' => 'd074a62',
+      'output' => '_controller/js/c9109f3.js',
+      'name' => 'c9109f3',
       'debug' => NULL,
       'combine' => NULL,
     ),
