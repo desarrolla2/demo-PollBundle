@@ -5,7 +5,7 @@
 /app/bootstrap*
 /app/cache/*
 /app/logs/*
-#/vendor/*
+/vendor/*
 /app/config/security.yml
 /app/config/parameters.yml
 /app/config/parameters.ini
